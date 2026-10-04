@@ -1,0 +1,15 @@
+version: 1
+runtime: typescript
+entry: src/index.ts
+description: 2026 Canadian personal income tax estimator — federal + provincial/territorial tax, marginal rates, RRSP vs TFSA comparison
+
+build:
+  install: npm ci
+  command: npm run build
+
+startCommand:
+  type: http
+  command: node dist/index.js
+
+configSchema:
+  source: code
